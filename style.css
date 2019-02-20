@@ -1,0 +1,180 @@
+
+#playbody{
+    margin:0;
+    padding:0;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:5%;
+   
+    background:#fff;
+    color:#000;
+}
+    
+
+.col-sm-4{
+    font-size: 20px;
+}
+
+            
+.game{
+    padding:2em;background:#eee;
+    font:300 1.25em/1.6 monospace;
+}
+
+#logo{
+    background: url(./images/fingers-149295.png)  fixed;
+    height:100vh;
+
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+ 
+}
+
+#logo2{
+    background: url(./images/paper.jpg) no-repeat center center fixed;
+    height:100vh;
+    width: 100%;
+    position:relative;   
+}
+
+#playlogo   {
+    background: url(images/paper.jpg) no-repeat center center fixed;
+    display: table;
+    height:100vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+            
+
+#choice{
+    color: white;
+    font-size: 5em;
+    margin-left: .2em; 
+    font-family: 'Pangolin', cursive;
+    text-decoration: underline overline;
+    background-color: green;
+    text-transform: uppercase;
+
+
+}
+#choice :hover{
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.4s; 
+    color: black;
+    background-color:white;
+ 
+}
+/* #choice1,choice2,choice3{
+   /* Safari */
+   
+/* } */ 
+
+#howtoplaytext{
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 8em;
+    padding-top: ;
+   
+    text-decoration: underline overline;
+
+
+}
+
+#clicktoplay, #header2{
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 1.3em;
+    font-style: italic;
+   
+}
+
+.col-md-5{
+    margin-left: 1.1em;
+    margin-right: 1.5em;
+
+}
+#metamaskpic{
+height:300px;
+width:auto;
+}
+
+#cptext{
+    font-size: 30px;
+	padding: .2em;
+	
+ font-family: 'Cormorant Unicase', serif;
+}
+#play{
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 5em;
+text-transform: uppercase;
+font-style: italic;
+}
+
+#hero-image{
+    background: url(./images/aboutus.jpg) no-repeat center center fixed;
+    height:100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    position:relative;   
+}
+
+#hero-image2{
+    background: url(./images/play-fun-blocks-block-591652.jpeg) no-repeat center center fixed;
+    height:100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    position:relative;   
+}
+
+
+.nav-item{
+    font-size: 1.8em;
+    font-family: 'Cormorant Unicase', serif;
+
+text-transform: uppercase;
+}
+
+#ethereumpic{
+   width: 500px ;
+}
+
+#space{
+    padding-top: 15em;
+   
+}
+
+
+/* .work-step{
+    margin-top:50px;
+} */
+#bitcoinimage{
+	padding: 3em;
+}
+#ether{
+	padding:1em;
+}
+.work-step div{
+    border:1px solid #E67E22;
+    display:inline-block;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    text-align:center;
+    line-height:40px;
+}
+
+footer{
+    width:100%;
+
+    background-color: black;
+    color:white;
+    font-family: 'Courgette', cursive;
+}
