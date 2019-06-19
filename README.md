@@ -1,4 +1,9 @@
 # Rock-Paper-Scissors-Blockchain
+A simple DApp that is a rock, paper, scissor game. Solidity is used to make the smart contracts
+
+## Notes
+- Must have metamask installed and ether from the Ropsten network
+- Players start the game with metamask but unfortunatley have to figure how to send ether when a player wins. 
 
 ## Tools/Languages Used:
 
