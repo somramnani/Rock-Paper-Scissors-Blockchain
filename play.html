@@ -1,59 +1,107 @@
-<!doctype html> 
-<html lang="en"> 
-<head> 
-  <link rel="stylesheet" href="style.css">
-  <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width">
-  <title>Rock, Paper, Scissors</title>
- 
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Rock, Paper, Scissors</title>
 
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pangolin"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <header id="top">
-        <nav class= "navbar navbar-inverse  navbar-fixed-top">
-            <div class= "container-fluid">
-                <div class="navbar-header"> 
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>               
-    
-                    </button>                
-                    <a class="navbar-brand" href="#"><img src="" id="">                    
-                    </div>
-                            
-                    <div class=" collapse navbar-collapse " id="myNavbar">        
-                        <ul class="nav navbar-nav navbar-right">           
-                            <li class="nav-item "> <a class="nav-link scroll" href="index.html"> Home</a></li>              
-                            <li class="nav-item active"> <a class="nav-link scroll" href="play.html">Play!</a></li>                
-                            <li class="nav-item"> <a class="nav-link scroll" href="about.html"> About</a></li>                 
-                        </ul>                
-                    </div>              
-                </div>        
-            </nav>
-            
-        <div id="hero-image2">
-            <div class="landing-text">
-                <h1 id="introtitle"></h1>
-                <h3 id="introdescription"></h3>
-            
-            <div class="container">
-                <br> <br> <br> <br><br><br>
-                <button class="btn" onClick="setPlayer('rock')" id="choice"><i class="fa fa-hand-rock-o" aria-hidden="true"> Rock</i></button>
-                <button class="btn" onClick="setPlayer('paper')" id="choice"><i class="fa fa-hand-paper-o"> Paper</i></button>
-                <button class="btn"onClick="setPlayer('scissors')" id="choice"><i class="fa fa-hand-scissors-o"> Scissors</i></button>
-                <br/>
-                <p class="form-control-static" id="pp1Choice"></p>  
-            </div>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="" id="" /> </a>
+          </div>
 
-			 <section class="footer">
-     
-            <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-            <script src="js/index.js"></script>
-</body>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item">
+                <a class="nav-link scroll" href="index.html"> Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link scroll" href="play.html">Play!</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scroll" href="about.html"> About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="hero-image2">
+      <div class="landing-text">
+        <h1 id="introtitle"></h1>
+        <h3 id="introdescription"></h3>
+
+        <div class="container">
+          <br />
+          <br />
+          <br />
+          <br /><br /><br />
+          <button class="btn" onClick="setPlayer('rock')" id="choice">
+            <i class="fa fa-hand-rock-o" aria-hidden="true"> Rock</i>
+          </button>
+          <button class="btn" onClick="setPlayer('paper')" id="choice">
+            <i class="fa fa-hand-paper-o"> Paper</i>
+          </button>
+          <button class="btn" onClick="setPlayer('scissors')" id="choice">
+            <i class="fa fa-hand-scissors-o"> Scissors</i>
+          </button>
+          <br />
+          <p class="form-control-static" id="pp1Choice"></p>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer">
+      <footer class="container-fluid text-center">
+        <div class="row">
+          <div class="col-sm-4" id="contactus">
+            <h3 id="contactus" class="text-center">Contact Us.</h3>
+            <br />
+            <br />
+            <h4 class="info">2018</h4>
+            <h4 class="info">E-mail: som.ramnani@gmail.com</h4>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>
