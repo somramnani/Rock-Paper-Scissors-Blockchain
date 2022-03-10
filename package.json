@@ -1,0 +1,14 @@
+{
+  "name": "Rock-Paper-Scissors-Blockchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/somramnani/Rock-Paper-Scissors-Blockchain.git",
+  "author": "somramnani <som.ramnani@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier"
+  },
+  "dependencies": {
+    "prettier": "2.5.1"
+  }
+}

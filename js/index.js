@@ -1,50 +1,147 @@
 // var btnclicked = false;
 //----------------------------------------------------------------------------
-						//Injecting Web3
+//Injecting Web3
 //----------------------------------------------------------------------------
 //  $(document).ready(function(){
- Web3 = require('web3');
+Web3 = require("web3");
 
-
-	if (typeof web3 != 'undefined')	{
-		web3 = new Web3(web3.currentProvider);
-		console.log("existing web3: provider " + typeof web3);
-		console.log(web3.currentProvider);
-	}
-	else{	
-		web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));	
-		// alert("Please install metamask");
+if (typeof web3 != "undefined") {
+  web3 = new Web3(web3.currentProvider);
+  console.log("existing web3: provider " + typeof web3);
+  console.log(web3.currentProvider);
+} else {
+  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+  // alert("Please install metamask");
 }
 console.log(web3.isConnected());
 console.log(web3.eth.accounts[0]);
 
-
 //----------------------------------------------------------------------------
-						//The Contracts Information
+//The Contracts Information
 //----------------------------------------------------------------------------
 
-var rpsContract = web3.eth.contract([{"constant":true,"inputs":[],"name":"player2Choice","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"setOwner","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getPlayer2Choice","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getWinner","outputs":[{"name":"x","type":"int256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"checkBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"p1choice","type":"string"},{"name":"p2choice","type":"string"}],"name":"setPlayer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"player1Choice","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"winner","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getPlayer1Choice","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"player1Choice","type":"string"},{"indexed":false,"name":"player2Choice","type":"string"}],"name":"rpsEv","type":"event"}]);
-var contractInstance = rpsContract.at('0x262B38a1dB5edb7F25aF1724381841B6009d85f9');
+var rpsContract = web3.eth.contract([
+  {
+    constant: true,
+    inputs: [],
+    name: "player2Choice",
+    outputs: [{ name: "", type: "string" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: false,
+    inputs: [],
+    name: "setOwner",
+    outputs: [],
+    payable: true,
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "getPlayer2Choice",
+    outputs: [{ name: "", type: "string" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "getWinner",
+    outputs: [{ name: "x", type: "int256" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "checkBalance",
+    outputs: [{ name: "", type: "uint256" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: false,
+    inputs: [
+      { name: "p1choice", type: "string" },
+      { name: "p2choice", type: "string" },
+    ],
+    name: "setPlayer",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "player1Choice",
+    outputs: [{ name: "", type: "string" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: false,
+    inputs: [],
+    name: "winner",
+    outputs: [],
+    payable: true,
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "getPlayer1Choice",
+    outputs: [{ name: "", type: "string" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "constructor",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: false, name: "player1Choice", type: "string" },
+      { indexed: false, name: "player2Choice", type: "string" },
+    ],
+    name: "rpsEv",
+    type: "event",
+  },
+]);
+var contractInstance = rpsContract.at(
+  "0x262B38a1dB5edb7F25aF1724381841B6009d85f9"
+);
 console.log(contractInstance);
 
-
 //----------------------------------------------------------------------------
-						// Setting the Computer's choice
+// Setting the Computer's choice
 //----------------------------------------------------------------------------
 
 var p2choice = Math.random();
-if (p2choice <0.34){
-	p2choice ="rock";
-}else if(p2choice<= 0.67){
-	p2choice= "paper";
-}else{
-	p2choice= "scissors";
+if (p2choice < 0.34) {
+  p2choice = "rock";
+} else if (p2choice <= 0.67) {
+  p2choice = "paper";
+} else {
+  p2choice = "scissors";
 }
 
 //----------------------------------------------------------------------------
-						// Event Watch
+// Event Watch
 //----------------------------------------------------------------------------
-
 
 // var maxblock = 0;
 // var event = contractInstance.rpsEv({},{fromBlock: 0, toBlock: 'latest'});
@@ -58,60 +155,58 @@ if (p2choice <0.34){
 // }
 // });
 
-
 //----------------------------------------------------------------------------
-						// Setting the button
+// Setting the button
 //----------------------------------------------------------------------------
 
-function setPlayer(choice){
-var p1choice = choice;
-	
-	contractInstance.setPlayer(p1choice,p2choice, {from:web3.eth.accounts[0]},function(){	
-		contractInstance.getPlayer1Choice((error,result) => {
-			if (!error)
-				alert("You (Player 1) Chose: " + result), 
-				console.log("Player 1 (You) Chose: " + result);	
-			else
-				console.log("ERROR!");
-			});
-			
-			contractInstance.getPlayer2Choice((error,result) => {
-				if (!error)
-					alert("Your Opponent (Player 2) Chose: " + result),
-					console.log(" (Player 2) Chose: " + result);
-				else
-					console.log("ERROR!");
-				});
-		
-				contractInstance.getWinner((error,result) => {
-					if (result == 1)	
-					
-						alert("Congratulations! You Won!"),
-						console.log("Winner : Player " + result);
-					
-					else if(result == 2)
-						alert("You Lost. It's okay,Losing is part of the game. If you never lose, you are never truly tested, and never forced to grow! Try again!" ),	
-						console.log("Winner : Player " + result);
-					else if(result ==0)
-						alert ("Oh no! It's a tie. Play again!"),
-						console.log("Winner : Player " + result);
-					else
-						console.log("ERROR!");
-	
-		});
-//		contractInstance.getWinner((error,result) => {
-	//		if (result == 1)	
-//		contractInstance.winner.sendTransaction({from: web3.eth.accounts[0], to:contractaddress, gas:4000000},function(error, result) {
-	//		if (!error) {
-	//			console.log(result);
-//			}
-	//		else {
-	//			console.log(error);
-	//		}
-//		});
-	// });
-		 
-	});
+function setPlayer(choice) {
+  var p1choice = choice;
+
+  contractInstance.setPlayer(
+    p1choice,
+    p2choice,
+    { from: web3.eth.accounts[0] },
+    function () {
+      contractInstance.getPlayer1Choice((error, result) => {
+        if (!error)
+          alert("You (Player 1) Chose: " + result),
+            console.log("Player 1 (You) Chose: " + result);
+        else console.log("ERROR!");
+      });
+
+      contractInstance.getPlayer2Choice((error, result) => {
+        if (!error)
+          alert("Your Opponent (Player 2) Chose: " + result),
+            console.log(" (Player 2) Chose: " + result);
+        else console.log("ERROR!");
+      });
+
+      contractInstance.getWinner((error, result) => {
+        if (result == 1)
+          alert("Congratulations! You Won!"),
+            console.log("Winner : Player " + result);
+        else if (result == 2)
+          alert(
+            "You Lost. It's okay,Losing is part of the game. If you never lose, you are never truly tested, and never forced to grow! Try again!"
+          ),
+            console.log("Winner : Player " + result);
+        else if (result == 0)
+          alert("Oh no! It's a tie. Play again!"),
+            console.log("Winner : Player " + result);
+        else console.log("ERROR!");
+      });
+      //		contractInstance.getWinner((error,result) => {
+      //		if (result == 1)
+      //		contractInstance.winner.sendTransaction({from: web3.eth.accounts[0], to:contractaddress, gas:4000000},function(error, result) {
+      //		if (!error) {
+      //			console.log(result);
+      //			}
+      //		else {
+      //			console.log(error);
+      //		}
+      //		});
+      // });
+    }
+  );
 }
 // });
-
