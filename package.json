@@ -9,6 +9,7 @@
     "format": "prettier"
   },
   "dependencies": {
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "truffle-hdwallet-provider": "0.0.3"
   }
 }
