@@ -1,4 +1,4 @@
-# Rock-Paper-Scissors-Blockchain
+# rock-paper-scissors-DApp
 
 A simple DApp that is a rock, paper, scissor game. Solidity is used to make the smart contracts and the contract has been deployed to the Ropsten Network.
 

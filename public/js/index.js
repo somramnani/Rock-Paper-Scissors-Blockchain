@@ -187,7 +187,7 @@ function setPlayer(choice) {
             console.log("Winner : Player " + result);
         else if (result == 2)
           alert(
-            "You Lost. It's okay,Losing is part of the game. If you never lose, you are never truly tested, and never forced to grow! Try again!"
+            "You Lost. It's okay, Losing is part of the game. If you never lose, you are never truly tested, and never forced to grow! Try again!"
           ),
             console.log("Winner : Player " + result);
         else if (result == 0)

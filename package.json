@@ -1,5 +1,5 @@
 {
-  "name": "Rock-Paper-Scissors-Blockchain",
+  "name": "rock-paper-scissors-blockchain",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/somramnani/Rock-Paper-Scissors-Blockchain.git",
@@ -9,6 +9,7 @@
     "format": "prettier"
   },
   "dependencies": {
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "truffle-hdwallet-provider": "0.0.3"
   }
 }

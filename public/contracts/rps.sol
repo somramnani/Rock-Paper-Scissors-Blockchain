@@ -53,7 +53,7 @@ contract rps {
      msg.sender.transfer(20000000 wei);
    }
    
-   function checkBalance()public view returns(uint256) {
+   function  checkBalance()public view returns(uint256) {
      return address(this).balance;
    }
 }

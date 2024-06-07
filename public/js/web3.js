@@ -556,8 +556,8 @@ require = (function e(t, n, r) {
     ],
     4: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         /**
          * SolidityTypeAddress is a prootype that represents address type
@@ -587,8 +587,8 @@ require = (function e(t, n, r) {
     ],
     5: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         /**
          * SolidityTypeBool is a prootype that represents bool type
@@ -618,8 +618,8 @@ require = (function e(t, n, r) {
     ],
     6: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         /**
          * SolidityTypeBytes is a prototype that represents the bytes type.
@@ -674,17 +674,17 @@ require = (function e(t, n, r) {
          * @date 2015
          */
 
-        var f = require("./formatters");
+        var f = require("./formatters.js");
 
-        var SolidityTypeAddress = require("./address");
-        var SolidityTypeBool = require("./bool");
-        var SolidityTypeInt = require("./int");
-        var SolidityTypeUInt = require("./uint");
-        var SolidityTypeDynamicBytes = require("./dynamicbytes");
-        var SolidityTypeString = require("./string");
-        var SolidityTypeReal = require("./real");
-        var SolidityTypeUReal = require("./ureal");
-        var SolidityTypeBytes = require("./bytes");
+        var SolidityTypeAddress = require("./address.js");
+        var SolidityTypeBool = require("./bool.js");
+        var SolidityTypeInt = require("./int.js");
+        var SolidityTypeUInt = require("./uint.js");
+        var SolidityTypeDynamicBytes = require("./dynamicbytes.js");
+        var SolidityTypeString = require("./string.js");
+        var SolidityTypeReal = require("./real.js");
+        var SolidityTypeUReal = require("./ureal.js");
+        var SolidityTypeBytes = require("./bytes.js");
 
         var isDynamic = function (solidityType, type) {
           return (
@@ -1001,8 +1001,8 @@ require = (function e(t, n, r) {
     ],
     8: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         var SolidityTypeDynamicBytes = function () {
           this._inputFormatter = f.formatInputDynamicBytes;
@@ -1052,7 +1052,7 @@ require = (function e(t, n, r) {
         var BigNumber = require("bignumber.js");
         var utils = require("../utils/utils");
         var c = require("../utils/config");
-        var SolidityParam = require("./param");
+        var SolidityParam = require("./param.js");
 
         /**
          * Formats input value to byte representation of int
@@ -1310,8 +1310,8 @@ require = (function e(t, n, r) {
     ],
     10: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         /**
          * SolidityTypeInt is a prootype that represents int type
@@ -1508,8 +1508,8 @@ require = (function e(t, n, r) {
     ],
     12: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         /**
          * SolidityTypeReal is a prootype that represents real type
@@ -1545,8 +1545,8 @@ require = (function e(t, n, r) {
     ],
     13: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         var SolidityTypeString = function () {
           this._inputFormatter = f.formatInputString;
@@ -1570,8 +1570,8 @@ require = (function e(t, n, r) {
     ],
     14: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityParam = require("./param");
+        var f = require("./formatters.js");
+        var SolidityParam = require("./param.js");
 
         /**
          * SolidityType prototype is used to encode/decode solidity params of certain type
@@ -1846,8 +1846,8 @@ require = (function e(t, n, r) {
     ],
     15: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         /**
          * SolidityTypeUInt is a prootype that represents uint type
@@ -1883,8 +1883,8 @@ require = (function e(t, n, r) {
     ],
     16: [
       function (require, module, exports) {
-        var f = require("./formatters");
-        var SolidityType = require("./type");
+        var f = require("./formatters.js");
+        var SolidityType = require("./type.js");
 
         /**
          * SolidityTypeUReal is a prootype that represents ureal type
@@ -2767,23 +2767,23 @@ require = (function e(t, n, r) {
          * @date 2014
          */
 
-        var RequestManager = require("./web3/requestmanager");
-        var Iban = require("./web3/iban");
-        var Eth = require("./web3/methods/eth");
-        var DB = require("./web3/methods/db");
-        var Shh = require("./web3/methods/shh");
-        var Net = require("./web3/methods/net");
-        var Personal = require("./web3/methods/personal");
-        var Swarm = require("./web3/methods/swarm");
-        var Settings = require("./web3/settings");
+        var RequestManager = require("./web3/requestmanager.js");
+        var Iban = require("./web3/iban.js");
+        var Eth = require("./web3/methods/eth.js");
+        var DB = require("./web3/methods/db.js");
+        var Shh = require("./web3/methods/shh.js");
+        var Net = require("./web3/methods/net.js");
+        var Personal = require("./web3/methods/personal.js");
+        var Swarm = require("./web3/methods/swarm.js");
+        var Settings = require("./web3/settings.js");
         var version = require("./version.json");
-        var utils = require("./utils/utils");
-        var sha3 = require("./utils/sha3");
-        var extend = require("./web3/extend");
-        var Batch = require("./web3/batch");
-        var Property = require("./web3/property");
-        var HttpProvider = require("./web3/httpprovider");
-        var IpcProvider = require("./web3/ipcprovider");
+        var utils = require("./utils/utils.js");
+        var sha3 = require("./utils/sha3.js");
+        var extend = require("./web3/extend.js");
+        var Batch = require("./web3/batch.js");
+        var Property = require("./web3/property.js");
+        var HttpProvider = require("./web3/httpprovider.js");
+        var IpcProvider = require("./web3/ipcprovider.js");
         var BigNumber = require("bignumber.js");
 
         function Web3(provider) {
@@ -2935,11 +2935,11 @@ require = (function e(t, n, r) {
          */
 
         var sha3 = require("../utils/sha3");
-        var SolidityEvent = require("./event");
-        var formatters = require("./formatters");
+        var SolidityEvent = require("./event.js");
+        var formatters = require("./formatters.js");
         var utils = require("../utils/utils");
-        var Filter = require("./filter");
-        var watches = require("./methods/watches");
+        var Filter = require("./filter.js");
+        var watches = require("./methods/watches.js");
 
         var AllSolidityEvents = function (requestManager, json, address) {
           this._requestManager = requestManager;
@@ -3045,8 +3045,8 @@ require = (function e(t, n, r) {
          * @date 2015
          */
 
-        var Jsonrpc = require("./jsonrpc");
-        var errors = require("./errors");
+        var Jsonrpc = require("./jsonrpc.js");
+        var errors = require("./errors.js");
 
         var Batch = function (web3) {
           this.requestManager = web3._requestManager;
@@ -3125,9 +3125,9 @@ require = (function e(t, n, r) {
 
         var utils = require("../utils/utils");
         var coder = require("../solidity/coder");
-        var SolidityEvent = require("./event");
-        var SolidityFunction = require("./function");
-        var AllEvents = require("./allevents");
+        var SolidityEvent = require("./event.js");
+        var SolidityFunction = require("./function.js");
+        var AllEvents = require("./allevents.js");
 
         /**
          * Should be called to encode constructor params
@@ -3539,10 +3539,10 @@ require = (function e(t, n, r) {
 
         var utils = require("../utils/utils");
         var coder = require("../solidity/coder");
-        var formatters = require("./formatters");
+        var formatters = require("./formatters.js");
         var sha3 = require("../utils/sha3");
-        var Filter = require("./filter");
-        var watches = require("./methods/watches");
+        var Filter = require("./filter.js");
+        var watches = require("./methods/watches.js");
 
         /**
          * This prototype should be used to create event filters
@@ -3760,10 +3760,10 @@ require = (function e(t, n, r) {
     ],
     28: [
       function (require, module, exports) {
-        var formatters = require("./formatters");
+        var formatters = require("./formatters.js");
         var utils = require("./../utils/utils");
-        var Method = require("./method");
-        var Property = require("./property");
+        var Method = require("./method.js");
+        var Property = require("./property.js");
 
         // TODO: refactor, so the input params are not altered.
         // it's necessary to make same 'extension' work with multiple providers
@@ -3840,7 +3840,7 @@ require = (function e(t, n, r) {
          * @date 2014
          */
 
-        var formatters = require("./formatters");
+        var formatters = require("./formatters.js");
         var utils = require("../utils/utils");
 
         /**
@@ -4103,7 +4103,7 @@ require = (function e(t, n, r) {
 
         var utils = require("../utils/utils");
         var config = require("../utils/config");
-        var Iban = require("./iban");
+        var Iban = require("./iban.js");
 
         /**
          * Should the format output to a big number
@@ -4419,8 +4419,8 @@ require = (function e(t, n, r) {
 
         var coder = require("../solidity/coder");
         var utils = require("../utils/utils");
-        var errors = require("./errors");
-        var formatters = require("./formatters");
+        var errors = require("./errors.js");
+        var formatters = require("./formatters.js");
         var sha3 = require("../utils/sha3");
 
         /**
@@ -4727,7 +4727,7 @@ require = (function e(t, n, r) {
          * @date 2015
          */
 
-        var errors = require("./errors");
+        var errors = require("./errors.js");
 
         // workaround to use httpprovider in different envs
 
@@ -5132,7 +5132,7 @@ require = (function e(t, n, r) {
         "use strict";
 
         var utils = require("../utils/utils");
-        var errors = require("./errors");
+        var errors = require("./errors.js");
 
         var IpcProvider = function (path, net) {
           var _this = this;
@@ -5426,7 +5426,7 @@ require = (function e(t, n, r) {
          */
 
         var utils = require("../utils/utils");
-        var errors = require("./errors");
+        var errors = require("./errors.js");
 
         var Method = function (options) {
           this.name = options.name;
@@ -5679,7 +5679,7 @@ require = (function e(t, n, r) {
         var Property = require("../property");
         var c = require("../../utils/config");
         var Contract = require("../contract");
-        var watches = require("./watches");
+        var watches = require("./watches.js");
         var Filter = require("../filter");
         var IsSyncing = require("../syncing");
         var namereg = require("../namereg");
@@ -6258,7 +6258,7 @@ require = (function e(t, n, r) {
 
         var Method = require("../method");
         var Filter = require("../filter");
-        var watches = require("./watches");
+        var watches = require("./watches.js");
 
         var Shh = function (web3) {
           this._requestManager = web3._requestManager;
@@ -6874,10 +6874,10 @@ require = (function e(t, n, r) {
          * @date 2014
          */
 
-        var Jsonrpc = require("./jsonrpc");
+        var Jsonrpc = require("./jsonrpc.js");
         var utils = require("../utils/utils");
         var c = require("../utils/config");
-        var errors = require("./errors");
+        var errors = require("./errors.js");
 
         /**
          * It's responsible for passing messages to providers
@@ -7167,7 +7167,7 @@ require = (function e(t, n, r) {
          * @date 2015
          */
 
-        var formatters = require("./formatters");
+        var formatters = require("./formatters.js");
         var utils = require("../utils/utils");
 
         var count = 1;
@@ -7265,7 +7265,7 @@ require = (function e(t, n, r) {
          * @date 2015
          */
 
-        var Iban = require("./iban");
+        var Iban = require("./iban.js");
         var exchangeAbi = require("../contracts/SmartExchange.json");
 
         /**
@@ -7355,11 +7355,11 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./enc-base64"),
-              require("./md5"),
-              require("./evpkdf"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./enc-base64.js"),
+              require("./md5.js"),
+              require("./evpkdf.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -7688,7 +7688,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -9396,7 +9396,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -9537,7 +9537,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -9696,9 +9696,9 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./sha1"),
-              require("./hmac")
+              require("./core.js"),
+              require("./sha1.js"),
+              require("./hmac.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -9832,8 +9832,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -9900,7 +9900,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -10046,39 +10046,39 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./x64-core"),
-              require("./lib-typedarrays"),
-              require("./enc-utf16"),
-              require("./enc-base64"),
-              require("./md5"),
-              require("./sha1"),
-              require("./sha256"),
-              require("./sha224"),
-              require("./sha512"),
-              require("./sha384"),
-              require("./sha3"),
-              require("./ripemd160"),
-              require("./hmac"),
-              require("./pbkdf2"),
-              require("./evpkdf"),
-              require("./cipher-core"),
-              require("./mode-cfb"),
-              require("./mode-ctr"),
-              require("./mode-ctr-gladman"),
-              require("./mode-ofb"),
-              require("./mode-ecb"),
-              require("./pad-ansix923"),
-              require("./pad-iso10126"),
-              require("./pad-iso97971"),
-              require("./pad-zeropadding"),
-              require("./pad-nopadding"),
-              require("./format-hex"),
-              require("./aes"),
-              require("./tripledes"),
-              require("./rc4"),
-              require("./rabbit"),
-              require("./rabbit-legacy")
+              require("./core.js"),
+              require("./x64-core.js"),
+              require("./lib-typedarrays.js"),
+              require("./enc-utf16.js"),
+              require("./enc-base64.js"),
+              require("./md5.js"),
+              require("./sha1.js"),
+              require("./sha256.js"),
+              require("./sha224.js"),
+              require("./sha512.js"),
+              require("./sha384.js"),
+              require("./sha3.js"),
+              require("./ripemd160.js"),
+              require("./hmac.js"),
+              require("./pbkdf2.js"),
+              require("./evpkdf.js"),
+              require("./cipher-core.js"),
+              require("./mode-cfb.js"),
+              require("./mode-ctr.js"),
+              require("./mode-ctr-gladman.js"),
+              require("./mode-ofb.js"),
+              require("./mode-ecb.js"),
+              require("./pad-ansix923.js"),
+              require("./pad-iso10126.js"),
+              require("./pad-iso97971.js"),
+              require("./pad-zeropadding.js"),
+              require("./pad-nopadding.js"),
+              require("./format-hex.js"),
+              require("./aes.js"),
+              require("./tripledes.js"),
+              require("./rc4.js"),
+              require("./rabbit.js"),
+              require("./rabbit-legacy.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -10166,7 +10166,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -10247,7 +10247,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -10513,8 +10513,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -10611,8 +10611,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -10716,8 +10716,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -10777,8 +10777,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -10820,8 +10820,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -10877,8 +10877,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -10931,8 +10931,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -10982,8 +10982,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -11025,8 +11025,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -11056,8 +11056,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -11106,9 +11106,9 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./sha1"),
-              require("./hmac")
+              require("./core.js"),
+              require("./sha1.js"),
+              require("./hmac.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -11255,11 +11255,11 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./enc-base64"),
-              require("./md5"),
-              require("./evpkdf"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./enc-base64.js"),
+              require("./md5.js"),
+              require("./evpkdf.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -11501,11 +11501,11 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./enc-base64"),
-              require("./md5"),
-              require("./evpkdf"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./enc-base64.js"),
+              require("./md5.js"),
+              require("./evpkdf.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -11750,11 +11750,11 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./enc-base64"),
-              require("./md5"),
-              require("./evpkdf"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./enc-base64.js"),
+              require("./md5.js"),
+              require("./evpkdf.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -11909,7 +11909,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -12182,7 +12182,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -12333,8 +12333,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./sha256")
+              require("./core.js"),
+              require("./sha256.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -12415,7 +12415,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -12625,8 +12625,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./x64-core")
+              require("./core.js"),
+              require("./x64-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -12963,9 +12963,9 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./x64-core"),
-              require("./sha512")
+              require("./core.js"),
+              require("./x64-core.js"),
+              require("./sha512.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -13054,8 +13054,8 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./x64-core")
+              require("./core.js"),
+              require("./x64-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -13453,11 +13453,11 @@ require = (function e(t, n, r) {
           if (typeof exports === "object") {
             // CommonJS
             module.exports = exports = factory(
-              require("./core"),
-              require("./enc-base64"),
-              require("./md5"),
-              require("./evpkdf"),
-              require("./cipher-core")
+              require("./core.js"),
+              require("./enc-base64.js"),
+              require("./md5.js"),
+              require("./evpkdf.js"),
+              require("./cipher-core.js")
             );
           } else if (typeof define === "function" && define.amd) {
             // AMD
@@ -14244,7 +14244,7 @@ require = (function e(t, n, r) {
         (function (root, factory) {
           if (typeof exports === "object") {
             // CommonJS
-            module.exports = exports = factory(require("./core"));
+            module.exports = exports = factory(require("./core.js"));
           } else if (typeof define === "function" && define.amd) {
             // AMD
             define(["./core"], factory);
@@ -17689,7 +17689,7 @@ require = (function e(t, n, r) {
     ],
     web3: [
       function (require, module, exports) {
-        var Web3 = require("./lib/web3");
+        var Web3 = require("./lib/web3.js");
 
         // dont override global variable
         if (
